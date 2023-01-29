@@ -1,17 +1,17 @@
-AC_INIT([spek],[0.8.2])
+AC_INIT([spek],[0.8.5])
 AC_CONFIG_SRCDIR([src/spek.cc])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([1.11.1 foreign no-dist-gzip dist-xz serial-tests])
 AM_SILENT_RULES([yes])
 
 AC_LANG([C++])
+AM_PROG_AR
 AC_PROG_CXX
 CXXFLAGS="$CXXFLAGS -std=gnu++11 -Wall -Wextra"
 AC_PROG_CXXCPP
 AC_PROG_LIBTOOL
 AC_PROG_RANLIB
 AC_PROG_INSTALL
-IT_PROG_INTLTOOL([0.40.0])
 
 AC_CANONICAL_HOST
 AC_MSG_CHECKING([the OS])
@@ -46,9 +46,9 @@ AM_COND_IF([USE_VALGRIND], [use_valgrind=yes], [use_valgrind=no])
 
 AC_CHECK_LIB(m, log10)
 
-PKG_CHECK_MODULES(AVFORMAT, [libavformat >= 53.17])
-PKG_CHECK_MODULES(AVCODEC, [libavcodec >= 55.46])
-PKG_CHECK_MODULES(AVUTIL, [libavutil >= 51.17])
+PKG_CHECK_MODULES(AVFORMAT, [libavformat >= 59.27.100])
+PKG_CHECK_MODULES(AVCODEC, [libavcodec >= 59.37.100])
+PKG_CHECK_MODULES(AVUTIL, [libavutil >= 57.28.100])
 
 AM_OPTIONS_WXCONFIG
 reqwx=3.0.0
@@ -68,12 +68,11 @@ fi
 GETTEXT_PACKAGE=spek
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Gettext Package])
 AC_SUBST(GETTEXT_PACKAGE)
-AM_GNU_GETTEXT_VERSION([0.18.1])
-AM_PO_SUBDIRS
+AM_GNU_GETTEXT_VERSION([0.21])
+AM_GNU_GETTEXT([external])
 
 AC_CONFIG_FILES([
 	Makefile
-	data/spek.desktop.in
 	data/Makefile
 	data/icons/Makefile
 	data/icons/16x16/Makefile

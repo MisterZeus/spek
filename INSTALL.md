@@ -33,14 +33,14 @@ Spek requires OS X 10.5+ and an Intel-based Mac.
 To build Spek, download the source code tarball then run these commands from
 terminal:
 
-    tar -xvf spek-0.8.2.tar.xz
-    cd spek-0.8.2
+    tar -xvf spek-0.8.5.tar.xz
+    cd spek-0.8.5
     ./configure
     make
 
 To build you will need wxWidgets and FFmpeg packages. On Debian/Ubuntu you also
-need development packages: libwxgtk2.8-dev, wx-common, libavcodec-dev and
-libavformat-dev.
+need development packages: `libwxgtk2.8-dev`, `wx-common`, `libavcodec-dev` and
+`libavformat-dev`.
 
 To start Spek, run:
 

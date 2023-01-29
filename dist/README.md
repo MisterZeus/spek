@@ -1,7 +1,7 @@
 # Spek release checklist
 
  * Bump the version number in configure.ac.
- * `cd po && make update-po && tx push -s`.
+ * `make -C po update-po && tx push -s`.
  * `tx pull -a` and commit with correct `--author`s.
  * Review translations, fix things like missing mnemonics.
  * Translate what I can, Ich spreek un peu по-русски.
@@ -11,7 +11,7 @@
    * src/spek-preferences-dialog.cc
    * dist/win/bundle.sh
    * dist/osx/bundle.sh
- * Update authors using `git log X.Y.Z.. --pretty=format:"%an <%ae>" | sort -u`.
+ * Update authors using `git log vX.Y.Z.. --pretty=format:"%an <%ae>" | sort -u`.
  * Sync the list of authors with the About dialogue.
  * Update the copyright year in the About dialogue along with all the .po files.
  * Update news in README.md.
@@ -26,9 +26,8 @@
  * Update web/index.html: bump version numbers, binary sizes and news.
  * Write the blog post, link from web/index.html, don't publish yet.
  * Upload the tarball + OSX and WIN binaries.
- * `git tag -a X.Y.Z`.
+ * Update releases section in `data/spek.metainfo.xml.in`
+ * `git tag -a vX.Y.Z`.
+ * `git push origin vX.Y.Z`.
  * Upload the website using `make upload`.
  * Publish the blog post.
- * Send an announcement to the LAA list.
- * Update the forum thread on what.
- * Update FreeBSD and Debian ports.

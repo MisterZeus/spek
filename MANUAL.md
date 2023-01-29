@@ -1,6 +1,6 @@
-% SPEK(1) User's Guide | Version 0.8.2
+% SPEK(1) User's Guide | Version 0.8.5
 %
-% 2013-04-18
+% 2023-01-09
 
 # NAME
 
@@ -76,8 +76,8 @@ On OS X use the Command key instead of Ctrl.
 # AUTHORS
 
 Alexander Kojevnikov <alexander@kojevnikov.com>. Other contributors are listed
-in the LICENCE.md file distributed with the source code.
+in the CREDITS.md file distributed with the source code.
 
 # DISTRIBUTION
 
-The latest version of *Spek* may be downloaded from <http://spek.cc>.
+The latest version of *Spek* may be downloaded from <https://www.spek.cc>.
